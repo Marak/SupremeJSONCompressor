@@ -1,0 +1,30 @@
+{
+  "name": "@yantra-core/supreme",
+  "version": "1.0.0",
+  "description": "The Supreme JSON Compressor™  is the world's best JSON Compressor / Decompressor.",
+  "main": "./lib/index.js",
+  "type": "module",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yantra-core/SupremeJSONCompressor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/yantra-core/SupremeJSONCompressor/issues"
+  },
+  "homepage": "https://github.com/yantra-core/SupremeJSONCompressor#readme",
+  "devDependencies": {
+    "tap": "^18.5.8",
+    "tape": "^5.7.2"
+  }
+}
