@@ -151,7 +151,7 @@ console.log('decoded', decoded)
 # Alterate Options
 I am not thrilled to have to create this library.
 
-In pursuit of having to not make The Supreme JSON Compressor™ , I evaluated several other less supreme options.
+In pursuit of having to not make The Supreme JSON Compressor™ , I evaluated other less supreme options.
 
 Please feel free to use these alternative options in your pursuit of compressed JSON:
 
@@ -164,7 +164,7 @@ These are different from the solutions we are looking for. We can achieve much h
  - https://github.com/phretaddin/schemapack
  - https://github.com/colyseus/schema
 
-`phretaddin/schemapack` is closer solution; however it does not support optional fields or collections of records. Even without record support, not having optional fields means we have to send entire message on each request ( which is too much data )
+`phretaddin/schemapack` is closer solution; however it does not support optional fields or collections of records. Even with record support, not having optional fields means we have to send entire message on each request ( which is too much data )
 
 `colyseus/schema` is a possible option; however, code is tightly coupled to colyseus framework and without Visitor pattern extension is difficult. It may have support for nested collections? `colyseus` has a lot of [open issues](https://github.com/colyseus/schema/issues) that look important. `colyseus/schema` is a TypeScript library; while this is neat, there are no literal compression benefits from using TypeScript, so it only adds more complexity to the problem.
 
