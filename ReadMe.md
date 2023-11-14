@@ -149,7 +149,9 @@ console.log('decoded', decoded)
 
 
 # Alterate Options
-I am not thrilled to have to create this library. In pursuit of having to not make The Supreme JSON Compressor™ , I evaluated several other less supreme options.
+I am not thrilled to have to create this library.
+
+In pursuit of having to not make The Supreme JSON Compressor™ , I evaluated several other less supreme options.
 
 Please feel free to use these alternative options in your pursuit of compressed JSON:
 
