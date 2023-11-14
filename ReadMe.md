@@ -28,7 +28,7 @@ Average Decoding Time: 0.05ms
 Average Size per Encoded Message: 828.50 bytes
 
 node supreme-benchmark.js
-Average Encoding Time: 0.90ms
+Average Encoding Time: 0.49ms
 Average Decoding Time: 0.09ms
 Average Size per Encoded Message: 809.00 bytes
 
