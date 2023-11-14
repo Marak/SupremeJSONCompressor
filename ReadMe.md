@@ -7,12 +7,34 @@ The Supreme JSON Compressor™  is the world's best JSON Compressor / Decompress
 Why? I will tell you.
 
  - It is the most theoretically possible optimal compression in JavaScript
- - It has better compression and performance than Google ProtoBuffs
+ - It has better compression than Google ProtoBufs
  - It has support for nested Records and Collections
  - It has support for optional fields
  - It writes at the bit level
 
-I will post benchmark graphs soon to show you.
+
+The Supreme JSON Compressor™ is Alpha v1 software; however, The Supreme JSON Compressor™ already compresses more efficiently than Google Protobuf. YMMV, data compression is not a one-size-fits-all solution.
+
+The Supreme JSON Compressor™ works well for us; there is room for further optimizations.
+
+
+## Google ProtoBuf vs The Supreme JSON Compressor™
+
+```js
+
+node protobuf-benchmark.js
+Average Encoding Time: 0.04ms
+Average Decoding Time: 0.05ms
+Average Size per Encoded Message: 828.50 bytes
+
+node supreme-benchmark.js
+Average Encoding Time: 0.90ms
+Average Decoding Time: 0.09ms
+Average Size per Encoded Message: 809.00 bytes
+
+```
+
+You can see that `809.00 bytes` is smaller than `828.50 bytes`. Even at an unoptimized v1 Alpha status, The Supreme JSON Compressor™ compresses our game's snapshot data more tightly than ProtoBuf. The Supreme JSON Compressor™ currently lags behind Google ProtoBuf in encoding time, but we can optimize this later.
  
 ## Data Types
 
@@ -149,9 +171,7 @@ console.log('decoded', decoded)
 
 
 # Alterate Options
-I am not thrilled to have to create this library.
-
-In pursuit of having to not make The Supreme JSON Compressor™ , I evaluated other less supreme options.
+In pursuit of having to not want to make The Supreme JSON Compressor™ , I evaluated other less supreme options.
 
 Please feel free to use these alternative options in your pursuit of compressed JSON:
 
@@ -168,9 +188,9 @@ These are different from the solutions we are looking for. We can achieve much h
 
 `colyseus/schema` is a possible option; however, code is tightly coupled to colyseus framework and without Visitor pattern extension is difficult. It may have support for nested collections? `colyseus` has a lot of [open issues](https://github.com/colyseus/schema/issues) that look important. `colyseus/schema` is a TypeScript library; while this is neat, there are no literal compression benefits from using TypeScript, so it only adds more complexity to the problem.
 
-### ProtoBuff / AVRO / etc
+### ProtoBuf / AVRO / etc
 
-These univerisal encoding solutions provide second-class support to Javascript. I have reviewed all available implementations in vanilla JS, none of them are great or can support the smaller custom binary types.
+ProtoBuf and Apache AVRO are great technologies; however these universal encoding solutions provide second-class support and tooling to Javascript. I have reviewed all available implementations of Protobuf and AVRO in JS Land, none of them are great or can intuitively support the smaller custom binary types. It will always be possible to get better compression through custom binary codec.
 
 ### License
 AGPL

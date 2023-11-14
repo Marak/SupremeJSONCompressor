@@ -27,12 +27,12 @@ const _schema = {
   },
   width: { type: 'Int32' },
   height: { type: 'Int32' },
-  rotation: { type: 'Int32' }, // TODO: special case with radians->bytes optimization
+  rotation: { type: 'Int16' }, // TODO: special case with radians->bytes optimization
   mass: { type: 'Int32' },
-  health: { type: 'Int32' },
-  depth: { type: 'Float64' },
+  health: { type: 'Int16' },
+  depth: { type: 'Int32' },
   lifetime: { type: 'Int32' },
-  radius: { type: 'Float64' },
+  radius: { type: 'Int32' },
   isSensor: { type: 'Boolean' },
   isStatic: { type: 'Boolean' },
   destroyed: { type: 'Boolean' },

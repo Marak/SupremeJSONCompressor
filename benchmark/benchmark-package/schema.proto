@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+message Position {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message Velocity {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message Player {
+    int32 id = 1;
+    string name = 2;
+    string type = 3;
+    Position position = 4;
+    Velocity velocity = 5;
+    int32 width = 6;
+    int32 height = 7;
+    int32 rotation = 8;
+    int32 mass = 9;
+    int32 health = 10;
+    int32 depth = 11;
+    int32 lifetime = 12;
+    int32 radius = 13;
+    bool isSensor = 14;
+    bool isStatic = 15;
+    bool destroyed = 16;
+    int32 owner = 17;
+    int32 maxSpeed = 18;
+}
+
+message Snapshot {
+    int32 id = 1;
+    repeated Player state = 2;
+}
+
