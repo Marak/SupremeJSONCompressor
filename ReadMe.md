@@ -2,6 +2,14 @@
 
 ### ALPHA NOTICE
 
+**Status**: 
+
+We've achieved smaller compression sizes than ProtoBuf; however, to beat CPU times, we need to complete the code generators for encoders/decoders. This works because we have a script that parses a schema and generates a tailor-made encoder/decoder that is hard-coded and optimized for that specific schema. I've started work on the code gen tools here if anyone is interested in working on this.
+
+We are still using Protobuf in production for Mantra and look forward to using The Supreme JSON Compressor™ in the future once we complete the code-gen tools.
+
+<hr/>
+
 The Supreme JSON Compressor™  is the world's best JSON Compressor / Decompressor.
 
 Why? I will tell you.
@@ -175,7 +183,7 @@ In pursuit of having to not want to make The Supreme JSON Compressor™ , I eval
 
 Please feel free to use these alternative options in your pursuit of compressed JSON:
 
-### msgpack / gzip / etc / untype compressions
+### msgpack / gzip / etc / untyped / schema-less compressions
 
 These are different from the solutions we are looking for. We can achieve much higher compression by explicitly providing schema to the client and server for all of our data with binary types. 
 
