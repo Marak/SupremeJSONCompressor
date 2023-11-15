@@ -4,7 +4,7 @@
 
 **Status**: 
 
-We've achieved smaller compression sizes than ProtoBuf; however, to beat CPU times, we need to complete the code generators for encoders/decoders. This works because we have a script that parses a schema and generates a tailor-made encoder/decoder that is hard-coded and optimized for that specific schema. I've started work on the code gen tools here if anyone is interested in working on this.
+We've achieved smaller compression sizes than ProtoBuf; however, to beat CPU times, we need to complete the code generators for encoders/decoders. This works because we have a script that parses a schema and generates a tailor-made encoder/decoder that is hard-coded and optimized for that specific schema. I've started work on the code gen tools [here](https://github.com/yantra-core/SupremeJSONCompressor/blob/master/examples/codegen-visitor.js) if anyone is interested in working on this.
 
 We are still using Protobuf in production for Mantra and look forward to using The Supreme JSON Compressor™ in the future once we complete the code-gen tools.
 
